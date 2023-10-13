@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="open localhost" type="BashProRunConfiguration" activateToolWindowBeforeRun="false">
+    <envs>
+      <env name="URL" value="http://localhost:1234/index.html" />
+    </envs>
+    <scriptContent>open -a &quot;Google Chrome&quot; $URL</scriptContent>
+    <option name="sourceType" value="snippet" />
+    <RunnerSettings bashdbVersion="Automatic" bashPathMapper="Automatic" RunnerId="pro.bashsupport.shDebugRunner" />
+    <method v="2" />
+  </configuration>
+</component>
