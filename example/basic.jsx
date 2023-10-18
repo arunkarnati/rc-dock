@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {jsxTab, htmlTab} from './prism-tabs';
-import {DockLayout, DockContextType} from '../lib';
+import { DockLayout } from '../lib';
+import { htmlTab, jsxTab } from './prism-tabs';
 
 let tab = {
   content: <div>Tab Content</div>,
@@ -71,22 +71,7 @@ if (window.innerWidth < 600) {
   layout.dockbox.children.pop();
 }
 
-let count = 0;
-
 class Demo extends React.Component {
-
-  onDragNewTab = (e) => {
-    let content = `New Tab ${count++}`;
-    DragStore.dragStart(DockContextType, {
-      tab: {
-        id: content,
-        content: <div style={{padding: 20}}>{content}</div>,
-        title: content,
-        closable: true,
-      }
-    }, e.nativeEvent);
-  };
-
   render() {
     return (
       <DockLayout defaultLayout={layout} style={{position: 'absolute', left: 10, top: 10, right: 10, bottom: 10}}/>
